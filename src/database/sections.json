@@ -2,286 +2,1503 @@
   {
     "title": "Development Tools",
     "services": [
-      { "title": "GitHub", "url": "https://github.com", "icon": "🐙" },
-      { "title": "GitLab", "url": "https://gitlab.com", "icon": "🦊", "description": "DevOps platform for source code management" },
-      { "title": "Bitbucket", "url": "https://bitbucket.org", "icon": "🪣" },
-      { "title": "VS Code Server", "url": "http://192.168.1.100:8080", "port": "8080", "icon": "💻", "description": "Browser-based VS Code editor" },
-      { "title": "JetBrains Hub", "url": "http://192.168.1.101:8081", "port": "8081", "icon": "🚀" },
-      { "title": "Code Review", "url": "https://review.example.com", "icon": "👀", "description": "Collaborative code review platform" },
-      { "title": "Prettier Server", "url": "http://192.168.1.102:3000", "port": "3000", "icon": "✨" },
-      { "title": "ESLint Dashboard", "url": "http://192.168.1.103:4000", "port": "4000", "icon": "🔍" },
-      { "title": "Swagger UI", "url": "http://192.168.1.104:8082", "port": "8082", "icon": "📚", "description": "API documentation interface" },
-      { "title": "Storybook", "url": "http://192.168.1.105:6006", "port": "6006", "icon": "📖" }
+      {
+        "title": "GitHub",
+        "url": "https://github.com",
+        "icon": "🐙",
+        "repoUrl": "https://github.com/example/github",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "GitLab",
+        "url": "https://gitlab.com",
+        "icon": "🦊",
+        "description": "DevOps platform for source code management",
+        "repoUrl": "https://github.com/example/gitlab",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Bitbucket",
+        "url": "https://bitbucket.org",
+        "icon": "🪣",
+        "repoUrl": "https://github.com/example/bitbucket",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "VS Code Server",
+        "url": "http://192.168.1.100:8080",
+        "icon": "💻",
+        "description": "Browser-based VS Code editor",
+        "repoUrl": "https://github.com/example/vs-code-server",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "JetBrains Hub",
+        "url": "http://192.168.1.101:8081",
+        "icon": "🚀",
+        "repoUrl": "https://github.com/example/jetbrains-hub",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Code Review",
+        "url": "https://review.example.com",
+        "icon": "👀",
+        "description": "Collaborative code review platform",
+        "repoUrl": "https://github.com/example/code-review",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Prettier Server",
+        "url": "http://192.168.1.102:3000",
+        "icon": "✨",
+        "repoUrl": "https://github.com/example/prettier-server",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "ESLint Dashboard",
+        "url": "http://192.168.1.103:4000",
+        "icon": "🔍",
+        "repoUrl": "https://github.com/example/eslint-dashboard",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Swagger UI",
+        "url": "http://192.168.1.104:8082",
+        "icon": "📚",
+        "description": "API documentation interface",
+        "repoUrl": "https://github.com/example/swagger-ui",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Storybook",
+        "url": "http://192.168.1.105:6006",
+        "icon": "📖",
+        "repoUrl": "https://github.com/example/storybook",
+        "iconRepo": "🔷"
+      }
     ]
   },
   {
     "title": "CI/CD Pipeline",
     "services": [
-      { "title": "Jenkins", "url": "http://192.168.1.110:8080", "port": "8080", "icon": "🏗️", "description": "Automation server for continuous integration" },
-      { "title": "GitHub Actions", "url": "https://github.com/actions", "icon": "⚡" },
-      { "title": "CircleCI", "url": "https://circleci.com", "icon": "🔄", "description": "Continuous integration and delivery platform" },
-      { "title": "Travis CI", "url": "https://travis-ci.org", "icon": "🚦" },
-      { "title": "Drone CI", "url": "http://192.168.1.111:8000", "port": "8000", "icon": "🛸" },
-      { "title": "ArgoCD", "url": "http://192.168.1.112:8080", "port": "8080", "icon": "🐙", "description": "GitOps continuous delivery tool" },
-      { "title": "Spinnaker", "url": "http://192.168.1.113:9000", "port": "9000", "icon": "🎡" },
-      { "title": "TeamCity", "url": "http://192.168.1.114:8111", "port": "8111", "icon": "🏢", "description": "Build management and CI server" },
-      { "title": "Bamboo", "url": "http://192.168.1.115:8085", "port": "8085", "icon": "🎋" },
-      { "title": "Buildkite", "url": "https://buildkite.com", "icon": "🏗️" }
+      {
+        "title": "Jenkins",
+        "url": "http://192.168.1.110:8080",
+        "icon": "🏗️",
+        "description": "Automation server for continuous integration",
+        "repoUrl": "https://github.com/example/jenkins",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "GitHub Actions",
+        "url": "https://github.com/actions",
+        "icon": "⚡",
+        "repoUrl": "https://github.com/example/github-actions",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "CircleCI",
+        "url": "https://circleci.com",
+        "icon": "🔄",
+        "description": "Continuous integration and delivery platform",
+        "repoUrl": "https://github.com/example/circleci",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Travis CI",
+        "url": "https://travis-ci.org",
+        "icon": "🚦",
+        "repoUrl": "https://github.com/example/travis-ci",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Drone CI",
+        "url": "http://192.168.1.111:8000",
+        "icon": "🛸",
+        "repoUrl": "https://github.com/example/drone-ci",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "ArgoCD",
+        "url": "http://192.168.1.112:8080",
+        "icon": "🐙",
+        "description": "GitOps continuous delivery tool",
+        "repoUrl": "https://github.com/example/argocd",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Spinnaker",
+        "url": "http://192.168.1.113:9000",
+        "icon": "🎡",
+        "repoUrl": "https://github.com/example/spinnaker",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "TeamCity",
+        "url": "http://192.168.1.114:8111",
+        "icon": "🏢",
+        "description": "Build management and CI server",
+        "repoUrl": "https://github.com/example/teamcity",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Bamboo",
+        "url": "http://192.168.1.115:8085",
+        "icon": "🎋",
+        "repoUrl": "https://github.com/example/bamboo",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Buildkite",
+        "url": "https://buildkite.com",
+        "icon": "🏗️",
+        "repoUrl": "https://github.com/example/buildkite",
+        "iconRepo": "🔷"
+      }
     ]
   },
   {
     "title": "Monitoring & Observability",
     "services": [
-      { "title": "Grafana", "url": "http://192.168.1.120:3000", "port": "3000", "icon": "📊", "description": "Analytics and monitoring platform" },
-      { "title": "Prometheus", "url": "http://192.168.1.121:9090", "port": "9090", "icon": "🔥" },
-      { "title": "Datadog", "url": "https://app.datadoghq.com", "icon": "🐶", "description": "Cloud monitoring and security platform" },
-      { "title": "New Relic", "url": "https://newrelic.com", "icon": "📈" },
-      { "title": "Splunk", "url": "http://192.168.1.122:8000", "port": "8000", "icon": "🔎" },
-      { "title": "Kibana", "url": "http://192.168.1.123:5601", "port": "5601", "icon": "📉", "description": "Data visualization dashboard for Elasticsearch" },
-      { "title": "Jaeger", "url": "http://192.168.1.124:16686", "port": "16686", "icon": "🔍" },
-      { "title": "Zipkin", "url": "http://192.168.1.125:9411", "port": "9411", "icon": "🏃", "description": "Distributed tracing system" },
-      { "title": "AppDynamics", "url": "https://appdynamics.com", "icon": "⚡" },
-      { "title": "Dynatrace", "url": "https://dynatrace.com", "icon": "🎯" }
+      {
+        "title": "Grafana",
+        "url": "http://192.168.1.120:3000",
+        "icon": "📊",
+        "description": "Analytics and monitoring platform",
+        "repoUrl": "https://github.com/example/grafana",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Prometheus",
+        "url": "http://192.168.1.121:9090",
+        "icon": "🔥",
+        "repoUrl": "https://github.com/example/prometheus",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Datadog",
+        "url": "https://app.datadoghq.com",
+        "icon": "🐶",
+        "description": "Cloud monitoring and security platform",
+        "repoUrl": "https://github.com/example/datadog",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "New Relic",
+        "url": "https://newrelic.com",
+        "icon": "📈",
+        "repoUrl": "https://github.com/example/new-relic",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Splunk",
+        "url": "http://192.168.1.122:8000",
+        "icon": "🔎",
+        "repoUrl": "https://github.com/example/splunk",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Kibana",
+        "url": "http://192.168.1.123:5601",
+        "icon": "📉",
+        "description": "Data visualization dashboard for Elasticsearch",
+        "repoUrl": "https://github.com/example/kibana",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Jaeger",
+        "url": "http://192.168.1.124:16686",
+        "icon": "🔍",
+        "repoUrl": "https://github.com/example/jaeger",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Zipkin",
+        "url": "http://192.168.1.125:9411",
+        "icon": "🏃",
+        "description": "Distributed tracing system",
+        "repoUrl": "https://github.com/example/zipkin",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "AppDynamics",
+        "url": "https://appdynamics.com",
+        "icon": "⚡",
+        "repoUrl": "https://github.com/example/appdynamics",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Dynatrace",
+        "url": "https://dynatrace.com",
+        "icon": "🎯",
+        "repoUrl": "https://github.com/example/dynatrace",
+        "iconRepo": "🔷"
+      }
     ]
   },
   {
     "title": "Container Management",
     "services": [
-      { "title": "Docker Desktop", "url": "http://192.168.1.130:9000", "port": "9000", "icon": "🐳", "description": "Container platform for building applications" },
-      { "title": "Kubernetes Dashboard", "url": "http://192.168.1.131:8001", "port": "8001", "icon": "☸️" },
-      { "title": "Portainer", "url": "http://192.168.1.132:9000", "port": "9000", "icon": "📦", "description": "Container management platform" },
-      { "title": "Rancher", "url": "http://192.168.1.133:8080", "port": "8080", "icon": "🤠" },
-      { "title": "OpenShift", "url": "http://192.168.1.134:8443", "port": "8443", "icon": "🔴" },
-      { "title": "Docker Registry", "url": "http://192.168.1.135:5000", "port": "5000", "icon": "📚", "description": "Private Docker registry" },
-      { "title": "Harbor", "url": "http://192.168.1.136:8080", "port": "8080", "icon": "⚓" },
-      { "title": "Nomad", "url": "http://192.168.1.137:4646", "port": "4646", "icon": "🏕️", "description": "Workload orchestrator" },
-      { "title": "Mesos", "url": "http://192.168.1.138:5050", "port": "5050", "icon": "⚙️" },
-      { "title": "Swarm Manager", "url": "http://192.168.1.139:2377", "port": "2377", "icon": "🐝" }
+      {
+        "title": "Docker Desktop",
+        "url": "http://192.168.1.130:9000",
+        "icon": "🐳",
+        "description": "Container platform for building applications",
+        "repoUrl": "https://github.com/example/docker-desktop",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Kubernetes Dashboard",
+        "url": "http://192.168.1.131:8001",
+        "icon": "☸️",
+        "repoUrl": "https://github.com/example/kubernetes-dashboard",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Portainer",
+        "url": "http://192.168.1.132:9000",
+        "icon": "📦",
+        "description": "Container management platform",
+        "repoUrl": "https://github.com/example/portainer",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Rancher",
+        "url": "http://192.168.1.133:8080",
+        "icon": "🤠",
+        "repoUrl": "https://github.com/example/rancher",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "OpenShift",
+        "url": "http://192.168.1.134:8443",
+        "icon": "🔴",
+        "repoUrl": "https://github.com/example/openshift",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Docker Registry",
+        "url": "http://192.168.1.135:5000",
+        "icon": "📚",
+        "description": "Private Docker registry",
+        "repoUrl": "https://github.com/example/docker-registry",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Harbor",
+        "url": "http://192.168.1.136:8080",
+        "icon": "⚓",
+        "repoUrl": "https://github.com/example/harbor",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Nomad",
+        "url": "http://192.168.1.137:4646",
+        "icon": "🏕️",
+        "description": "Workload orchestrator",
+        "repoUrl": "https://github.com/example/nomad",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Mesos",
+        "url": "http://192.168.1.138:5050",
+        "icon": "⚙️",
+        "repoUrl": "https://github.com/example/mesos",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Swarm Manager",
+        "url": "http://192.168.1.139:2377",
+        "icon": "🐝",
+        "repoUrl": "https://github.com/example/swarm-manager",
+        "iconRepo": "🐙"
+      }
     ]
   },
   {
     "title": "Database Management",
     "services": [
-      { "title": "phpMyAdmin", "url": "http://192.168.1.140:8080", "port": "8080", "icon": "🐘", "description": "MySQL database administration tool" },
-      { "title": "pgAdmin", "url": "http://192.168.1.141:5050", "port": "5050", "icon": "🐘" },
-      { "title": "MongoDB Compass", "url": "http://192.168.1.142:27017", "port": "27017", "icon": "🍃", "description": "MongoDB GUI client" },
-      { "title": "Redis Commander", "url": "http://192.168.1.143:8081", "port": "8081", "icon": "💎" },
-      { "title": "Adminer", "url": "http://192.168.1.144:8080", "port": "8080", "icon": "🔧" },
-      { "title": "TablePlus", "url": "https://tableplus.com", "icon": "📊", "description": "Modern database management tool" },
-      { "title": "DBeaver", "url": "https://dbeaver.io", "icon": "🦫" },
-      { "title": "MySQL Workbench", "url": "http://192.168.1.145:3306", "port": "3306", "icon": "🔨" },
-      { "title": "Robo 3T", "url": "https://robomongo.org", "icon": "🤖", "description": "MongoDB GUI" },
-      { "title": "ElasticHQ", "url": "http://192.168.1.146:5000", "port": "5000", "icon": "🔎" }
+      {
+        "title": "phpMyAdmin",
+        "url": "http://192.168.1.140:8080",
+        "icon": "🐘",
+        "description": "MySQL database administration tool",
+        "repoUrl": "https://github.com/example/phpmyadmin",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "pgAdmin",
+        "url": "http://192.168.1.141:5050",
+        "icon": "🐘",
+        "repoUrl": "https://github.com/example/pgadmin",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "MongoDB Compass",
+        "url": "http://192.168.1.142:27017",
+        "icon": "🍃",
+        "description": "MongoDB GUI client",
+        "repoUrl": "https://github.com/example/mongodb-compass",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Redis Commander",
+        "url": "http://192.168.1.143:8081",
+        "icon": "💎",
+        "repoUrl": "https://github.com/example/redis-commander",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Adminer",
+        "url": "http://192.168.1.144:8080",
+        "icon": "🔧",
+        "repoUrl": "https://github.com/example/adminer",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "TablePlus",
+        "url": "https://tableplus.com",
+        "icon": "📊",
+        "description": "Modern database management tool",
+        "repoUrl": "https://github.com/example/tableplus",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "DBeaver",
+        "url": "https://dbeaver.io",
+        "icon": "🦫",
+        "repoUrl": "https://github.com/example/dbeaver",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "MySQL Workbench",
+        "url": "http://192.168.1.145:3306",
+        "icon": "🔨",
+        "repoUrl": "https://github.com/example/mysql-workbench",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Robo 3T",
+        "url": "https://robomongo.org",
+        "icon": "🤖",
+        "description": "MongoDB GUI",
+        "repoUrl": "https://github.com/example/robo-3t",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "ElasticHQ",
+        "url": "http://192.168.1.146:5000",
+        "icon": "🔎",
+        "repoUrl": "https://github.com/example/elastichq",
+        "iconRepo": "🐙"
+      }
     ]
   },
   {
     "title": "Cloud Services",
     "services": [
-      { "title": "AWS Console", "url": "https://console.aws.amazon.com", "icon": "☁️", "description": "Amazon Web Services management console" },
-      { "title": "Azure Portal", "url": "https://portal.azure.com", "icon": "🔷" },
-      { "title": "Google Cloud", "url": "https://console.cloud.google.com", "icon": "☁️", "description": "Google Cloud Platform console" },
-      { "title": "DigitalOcean", "url": "https://cloud.digitalocean.com", "icon": "🌊" },
-      { "title": "Heroku", "url": "https://dashboard.heroku.com", "icon": "💜" },
-      { "title": "Vercel", "url": "https://vercel.com/dashboard", "icon": "▲", "description": "Frontend deployment platform" },
-      { "title": "Netlify", "url": "https://app.netlify.com", "icon": "🌐" },
-      { "title": "Cloudflare", "url": "https://dash.cloudflare.com", "icon": "🔶", "description": "CDN and security services" },
-      { "title": "Linode", "url": "https://cloud.linode.com", "icon": "🟢" },
-      { "title": "Vultr", "url": "https://my.vultr.com", "icon": "🦅" }
+      {
+        "title": "AWS Console",
+        "url": "https://console.aws.amazon.com",
+        "icon": "☁️",
+        "description": "Amazon Web Services management console",
+        "repoUrl": "https://github.com/example/aws-console",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Azure Portal",
+        "url": "https://portal.azure.com",
+        "icon": "🔷",
+        "repoUrl": "https://github.com/example/azure-portal",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Google Cloud",
+        "url": "https://console.cloud.google.com",
+        "icon": "☁️",
+        "description": "Google Cloud Platform console",
+        "repoUrl": "https://github.com/example/google-cloud",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "DigitalOcean",
+        "url": "https://cloud.digitalocean.com",
+        "icon": "🌊",
+        "repoUrl": "https://github.com/example/digitalocean",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Heroku",
+        "url": "https://dashboard.heroku.com",
+        "icon": "💜",
+        "repoUrl": "https://github.com/example/heroku",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Vercel",
+        "url": "https://vercel.com/dashboard",
+        "icon": "▲",
+        "description": "Frontend deployment platform",
+        "repoUrl": "https://github.com/example/vercel",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Netlify",
+        "url": "https://app.netlify.com",
+        "icon": "🌐",
+        "repoUrl": "https://github.com/example/netlify",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Cloudflare",
+        "url": "https://dash.cloudflare.com",
+        "icon": "🔶",
+        "description": "CDN and security services",
+        "repoUrl": "https://github.com/example/cloudflare",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Linode",
+        "url": "https://cloud.linode.com",
+        "icon": "🟢",
+        "repoUrl": "https://github.com/example/linode",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Vultr",
+        "url": "https://my.vultr.com",
+        "icon": "🦅",
+        "repoUrl": "https://github.com/example/vultr",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Project Management",
     "services": [
-      { "title": "Jira", "url": "https://blogicsystems.atlassian.net", "icon": "🔷", "description": "Issue and project tracking software" },
-      { "title": "Trello", "url": "https://trello.com", "icon": "📋" },
-      { "title": "Asana", "url": "https://app.asana.com", "icon": "🎯", "description": "Work management platform" },
-      { "title": "Monday.com", "url": "https://monday.com", "icon": "📅" },
-      { "title": "ClickUp", "url": "https://app.clickup.com", "icon": "✅" },
-      { "title": "Linear", "url": "https://linear.app", "icon": "📐", "description": "Issue tracking for software teams" },
-      { "title": "Notion", "url": "https://notion.so", "icon": "📝" },
-      { "title": "Basecamp", "url": "https://basecamp.com", "icon": "⛺", "description": "Project management and collaboration" },
-      { "title": "Redmine", "url": "http://192.168.1.150:3000", "port": "3000", "icon": "🔴" },
-      { "title": "Taiga", "url": "http://192.168.1.151:9000", "port": "9000", "icon": "🦎" }
+      {
+        "title": "Jira",
+        "url": "https://blogicsystems.atlassian.net",
+        "icon": "🔷",
+        "description": "Issue and project tracking software",
+        "repoUrl": "https://github.com/example/jira",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Trello",
+        "url": "https://trello.com",
+        "icon": "📋",
+        "repoUrl": "https://github.com/example/trello",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Asana",
+        "url": "https://app.asana.com",
+        "icon": "🎯",
+        "description": "Work management platform",
+        "repoUrl": "https://github.com/example/asana",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Monday.com",
+        "url": "https://monday.com",
+        "icon": "📅",
+        "repoUrl": "https://github.com/example/mondaycom",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "ClickUp",
+        "url": "https://app.clickup.com",
+        "icon": "✅",
+        "repoUrl": "https://github.com/example/clickup",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Linear",
+        "url": "https://linear.app",
+        "icon": "📐",
+        "description": "Issue tracking for software teams",
+        "repoUrl": "https://github.com/example/linear",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Notion",
+        "url": "https://notion.so",
+        "icon": "📝",
+        "repoUrl": "https://github.com/example/notion",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Basecamp",
+        "url": "https://basecamp.com",
+        "icon": "⛺",
+        "description": "Project management and collaboration",
+        "repoUrl": "https://github.com/example/basecamp",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Redmine",
+        "url": "http://192.168.1.150:3000",
+        "icon": "🔴",
+        "repoUrl": "https://github.com/example/redmine",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Taiga",
+        "url": "http://192.168.1.151:9000",
+        "icon": "🦎",
+        "repoUrl": "https://github.com/example/taiga",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Communication Tools",
     "services": [
-      { "title": "Slack", "url": "https://slack.com", "icon": "💬", "description": "Team communication platform" },
-      { "title": "Microsoft Teams", "url": "https://teams.microsoft.com", "icon": "🟣" },
-      { "title": "Discord", "url": "https://discord.com", "icon": "💜", "description": "Voice, video and text chat" },
-      { "title": "Zoom", "url": "https://zoom.us", "icon": "🎥" },
-      { "title": "Mattermost", "url": "http://192.168.1.160:8065", "port": "8065", "icon": "💬" },
-      { "title": "Rocket.Chat", "url": "http://192.168.1.161:3000", "port": "3000", "icon": "🚀", "description": "Open source team chat" },
-      { "title": "Zulip", "url": "http://192.168.1.162:9991", "port": "9991", "icon": "💭" },
-      { "title": "Twist", "url": "https://twist.com", "icon": "🌀", "description": "Asynchronous team communication" },
-      { "title": "Google Meet", "url": "https://meet.google.com", "icon": "📹" },
-      { "title": "Webex", "url": "https://webex.com", "icon": "🎙️" }
+      {
+        "title": "Slack",
+        "url": "https://slack.com",
+        "icon": "💬",
+        "description": "Team communication platform",
+        "repoUrl": "https://github.com/example/slack",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Microsoft Teams",
+        "url": "https://teams.microsoft.com",
+        "icon": "🟣",
+        "repoUrl": "https://github.com/example/microsoft-teams",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Discord",
+        "url": "https://discord.com",
+        "icon": "💜",
+        "description": "Voice, video and text chat",
+        "repoUrl": "https://github.com/example/discord",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Zoom",
+        "url": "https://zoom.us",
+        "icon": "🎥",
+        "repoUrl": "https://github.com/example/zoom",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Mattermost",
+        "url": "http://192.168.1.160:8065",
+        "icon": "💬",
+        "repoUrl": "https://github.com/example/mattermost",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Rocket.Chat",
+        "url": "http://192.168.1.161:3000",
+        "icon": "🚀",
+        "description": "Open source team chat",
+        "repoUrl": "https://github.com/example/rocketchat",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Zulip",
+        "url": "http://192.168.1.162:9991",
+        "icon": "💭",
+        "repoUrl": "https://github.com/example/zulip",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Twist",
+        "url": "https://twist.com",
+        "icon": "🌀",
+        "description": "Asynchronous team communication",
+        "repoUrl": "https://github.com/example/twist",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Google Meet",
+        "url": "https://meet.google.com",
+        "icon": "📹",
+        "repoUrl": "https://github.com/example/google-meet",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Webex",
+        "url": "https://webex.com",
+        "icon": "🎙️",
+        "repoUrl": "https://github.com/example/webex",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Documentation",
     "services": [
-      { "title": "Confluence", "url": "https://blogicsystems.atlassian.net/wiki", "icon": "📚", "description": "Team collaboration and documentation" },
-      { "title": "GitBook", "url": "https://gitbook.com", "icon": "📖" },
-      { "title": "Read the Docs", "url": "https://readthedocs.org", "icon": "📄", "description": "Documentation hosting platform" },
-      { "title": "DocuWiki", "url": "http://192.168.1.170:8080", "port": "8080", "icon": "📝" },
-      { "title": "BookStack", "url": "http://192.168.1.171:8080", "port": "8080", "icon": "📚" },
-      { "title": "Outline", "url": "http://192.168.1.172:3000", "port": "3000", "icon": "🗂️", "description": "Team knowledge base" },
-      { "title": "Docusaurus", "url": "http://192.168.1.173:3000", "port": "3000", "icon": "🦖" },
-      { "title": "MkDocs", "url": "http://192.168.1.174:8000", "port": "8000", "icon": "📋", "description": "Project documentation with Markdown" },
-      { "title": "Ghost Wiki", "url": "https://blogic.space", "icon": "👻" },
-      { "title": "Wiki.js", "url": "http://192.168.1.175:3000", "port": "3000", "icon": "📖" }
+      {
+        "title": "Confluence",
+        "url": "https://blogicsystems.atlassian.net/wiki",
+        "icon": "📚",
+        "description": "Team collaboration and documentation",
+        "repoUrl": "https://github.com/example/confluence",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "GitBook",
+        "url": "https://gitbook.com",
+        "icon": "📖",
+        "repoUrl": "https://github.com/example/gitbook",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Read the Docs",
+        "url": "https://readthedocs.org",
+        "icon": "📄",
+        "description": "Documentation hosting platform",
+        "repoUrl": "https://github.com/example/read-the-docs",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "DocuWiki",
+        "url": "http://192.168.1.170:8080",
+        "icon": "📝",
+        "repoUrl": "https://github.com/example/docuwiki",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "BookStack",
+        "url": "http://192.168.1.171:8080",
+        "icon": "📚",
+        "repoUrl": "https://github.com/example/bookstack",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Outline",
+        "url": "http://192.168.1.172:3000",
+        "icon": "🗂️",
+        "description": "Team knowledge base",
+        "repoUrl": "https://github.com/example/outline",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Docusaurus",
+        "url": "http://192.168.1.173:3000",
+        "icon": "🦖",
+        "repoUrl": "https://github.com/example/docusaurus",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "MkDocs",
+        "url": "http://192.168.1.174:8000",
+        "icon": "📋",
+        "description": "Project documentation with Markdown",
+        "repoUrl": "https://github.com/example/mkdocs",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Ghost Wiki",
+        "url": "https://blogic.space",
+        "icon": "👻",
+        "repoUrl": "https://github.com/example/ghost-wiki",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Wiki.js",
+        "url": "http://192.168.1.175:3000",
+        "icon": "📖",
+        "repoUrl": "https://github.com/example/wikijs",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Security & Auth",
     "services": [
-      { "title": "Keycloak", "url": "http://192.168.1.180:8080", "port": "8080", "icon": "🔐", "description": "Open source identity and access management" },
-      { "title": "Auth0", "url": "https://auth0.com", "icon": "🔒" },
-      { "title": "Okta", "url": "https://okta.com", "icon": "🛡️", "description": "Identity and access management" },
-      { "title": "Vault", "url": "http://192.168.1.181:8200", "port": "8200", "icon": "🔐" },
-      { "title": "1Password", "url": "https://1password.com", "icon": "🔑" },
-      { "title": "LastPass", "url": "https://lastpass.com", "icon": "🔒", "description": "Password manager" },
-      { "title": "Bitwarden", "url": "http://192.168.1.182:8080", "port": "8080", "icon": "🔐" },
-      { "title": "LDAP Admin", "url": "http://192.168.1.183:389", "port": "389", "icon": "📂", "description": "Directory services management" },
-      { "title": "FreeIPA", "url": "http://192.168.1.184:443", "port": "443", "icon": "🔐" },
-      { "title": "Authentik", "url": "http://192.168.1.185:9000", "port": "9000", "icon": "🛡️" }
+      {
+        "title": "Keycloak",
+        "url": "http://192.168.1.180:8080",
+        "icon": "🔐",
+        "description": "Open source identity and access management",
+        "repoUrl": "https://github.com/example/keycloak",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Auth0",
+        "url": "https://auth0.com",
+        "icon": "🔒",
+        "repoUrl": "https://github.com/example/auth0",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Okta",
+        "url": "https://okta.com",
+        "icon": "🛡️",
+        "description": "Identity and access management",
+        "repoUrl": "https://github.com/example/okta",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Vault",
+        "url": "http://192.168.1.181:8200",
+        "icon": "🔐",
+        "repoUrl": "https://github.com/example/vault",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "1Password",
+        "url": "https://1password.com",
+        "icon": "🔑",
+        "repoUrl": "https://github.com/example/1password",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "LastPass",
+        "url": "https://lastpass.com",
+        "icon": "🔒",
+        "description": "Password manager",
+        "repoUrl": "https://github.com/example/lastpass",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Bitwarden",
+        "url": "http://192.168.1.182:8080",
+        "icon": "🔐",
+        "repoUrl": "https://github.com/example/bitwarden",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "LDAP Admin",
+        "url": "http://192.168.1.183:389",
+        "icon": "📂",
+        "description": "Directory services management",
+        "repoUrl": "https://github.com/example/ldap-admin",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "FreeIPA",
+        "url": "http://192.168.1.184:443",
+        "icon": "🔐",
+        "repoUrl": "https://github.com/example/freeipa",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Authentik",
+        "url": "http://192.168.1.185:9000",
+        "icon": "🛡️",
+        "repoUrl": "https://github.com/example/authentik",
+        "iconRepo": "🔷"
+      }
     ]
   },
   {
     "title": "API Gateway",
     "services": [
-      { "title": "Kong Gateway", "url": "http://192.168.1.190:8000", "port": "8000", "icon": "🦍", "description": "Cloud-native API gateway" },
-      { "title": "Tyk", "url": "http://192.168.1.191:8080", "port": "8080", "icon": "🚪" },
-      { "title": "Apigee", "url": "https://apigee.com", "icon": "🔗", "description": "API management platform" },
-      { "title": "Ambassador", "url": "http://192.168.1.192:8080", "port": "8080", "icon": "🎩" },
-      { "title": "Traefik", "url": "http://192.168.1.193:8080", "port": "8080", "icon": "🚦" },
-      { "title": "Nginx Manager", "url": "http://192.168.1.194:81", "port": "81", "icon": "🟢", "description": "Nginx reverse proxy manager" },
-      { "title": "HAProxy", "url": "http://192.168.1.195:8404", "port": "8404", "icon": "⚖️" },
-      { "title": "Envoy", "url": "http://192.168.1.196:9901", "port": "9901", "icon": "📨", "description": "Cloud-native proxy" },
-      { "title": "AWS API Gateway", "url": "https://console.aws.amazon.com/apigateway", "icon": "🌐" },
-      { "title": "Azure API", "url": "https://portal.azure.com", "icon": "🔷" }
+      {
+        "title": "Kong Gateway",
+        "url": "http://192.168.1.190:8000",
+        "icon": "🦍",
+        "description": "Cloud-native API gateway",
+        "repoUrl": "https://github.com/example/kong-gateway",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Tyk",
+        "url": "http://192.168.1.191:8080",
+        "icon": "🚪",
+        "repoUrl": "https://github.com/example/tyk",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Apigee",
+        "url": "https://apigee.com",
+        "icon": "🔗",
+        "description": "API management platform",
+        "repoUrl": "https://github.com/example/apigee",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Ambassador",
+        "url": "http://192.168.1.192:8080",
+        "icon": "🎩",
+        "repoUrl": "https://github.com/example/ambassador",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Traefik",
+        "url": "http://192.168.1.193:8080",
+        "icon": "🚦",
+        "repoUrl": "https://github.com/example/traefik",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Nginx Manager",
+        "url": "http://192.168.1.194:81",
+        "icon": "🟢",
+        "description": "Nginx reverse proxy manager",
+        "repoUrl": "https://github.com/example/nginx-manager",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "HAProxy",
+        "url": "http://192.168.1.195:8404",
+        "icon": "⚖️",
+        "repoUrl": "https://github.com/example/haproxy",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Envoy",
+        "url": "http://192.168.1.196:9901",
+        "icon": "📨",
+        "description": "Cloud-native proxy",
+        "repoUrl": "https://github.com/example/envoy",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "AWS API Gateway",
+        "url": "https://console.aws.amazon.com/apigateway",
+        "icon": "🌐",
+        "repoUrl": "https://github.com/example/aws-api-gateway",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Azure API",
+        "url": "https://portal.azure.com",
+        "icon": "🔷",
+        "repoUrl": "https://github.com/example/azure-api",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Testing Tools",
     "services": [
-      { "title": "Postman", "url": "https://postman.com", "icon": "📮", "description": "API testing and development" },
-      { "title": "Insomnia", "url": "https://insomnia.rest", "icon": "😴" },
-      { "title": "Selenium Grid", "url": "http://192.168.1.200:4444", "port": "4444", "icon": "🕸️", "description": "Browser automation grid" },
-      { "title": "Cypress Dashboard", "url": "https://dashboard.cypress.io", "icon": "🌲" },
-      { "title": "SonarQube", "url": "http://192.168.1.201:9000", "port": "9000", "icon": "📊" },
-      { "title": "TestRail", "url": "http://192.168.1.202:8080", "port": "8080", "icon": "🚂", "description": "Test case management" },
-      { "title": "JMeter", "url": "http://192.168.1.203:8080", "port": "8080", "icon": "⚡" },
-      { "title": "K6 Dashboard", "url": "http://192.168.1.204:5665", "port": "5665", "icon": "📈", "description": "Load testing tool" },
-      { "title": "Artillery", "url": "http://192.168.1.205:3000", "port": "3000", "icon": "🎯" },
-      { "title": "Gatling", "url": "http://192.168.1.206:8080", "port": "8080", "icon": "🔫" }
+      {
+        "title": "Postman",
+        "url": "https://postman.com",
+        "icon": "📮",
+        "description": "API testing and development",
+        "repoUrl": "https://github.com/example/postman",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Insomnia",
+        "url": "https://insomnia.rest",
+        "icon": "😴",
+        "repoUrl": "https://github.com/example/insomnia",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Selenium Grid",
+        "url": "http://192.168.1.200:4444",
+        "icon": "🕸️",
+        "description": "Browser automation grid",
+        "repoUrl": "https://github.com/example/selenium-grid",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Cypress Dashboard",
+        "url": "https://dashboard.cypress.io",
+        "icon": "🌲",
+        "repoUrl": "https://github.com/example/cypress-dashboard",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "SonarQube",
+        "url": "http://192.168.1.201:9000",
+        "icon": "📊",
+        "repoUrl": "https://github.com/example/sonarqube",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "TestRail",
+        "url": "http://192.168.1.202:8080",
+        "icon": "🚂",
+        "description": "Test case management",
+        "repoUrl": "https://github.com/example/testrail",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "JMeter",
+        "url": "http://192.168.1.203:8080",
+        "icon": "⚡",
+        "repoUrl": "https://github.com/example/jmeter",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "K6 Dashboard",
+        "url": "http://192.168.1.204:5665",
+        "icon": "📈",
+        "description": "Load testing tool",
+        "repoUrl": "https://github.com/example/k6-dashboard",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Artillery",
+        "url": "http://192.168.1.205:3000",
+        "icon": "🎯",
+        "repoUrl": "https://github.com/example/artillery",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Gatling",
+        "url": "http://192.168.1.206:8080",
+        "icon": "🔫",
+        "repoUrl": "https://github.com/example/gatling",
+        "iconRepo": "🪣"
+      }
     ]
   },
   {
     "title": "Message Queues",
     "services": [
-      { "title": "RabbitMQ", "url": "http://192.168.1.210:15672", "port": "15672", "icon": "🐰", "description": "Message broker for distributed systems" },
-      { "title": "Kafka UI", "url": "http://192.168.1.211:8080", "port": "8080", "icon": "📨" },
-      { "title": "Redis Queue", "url": "http://192.168.1.212:6379", "port": "6379", "icon": "💎", "description": "In-memory data structure store" },
-      { "title": "ActiveMQ", "url": "http://192.168.1.213:8161", "port": "8161", "icon": "📬" },
-      { "title": "NATS", "url": "http://192.168.1.214:8222", "port": "8222", "icon": "⚡" },
-      { "title": "Celery Flower", "url": "http://192.168.1.215:5555", "port": "5555", "icon": "🌸", "description": "Celery monitoring tool" },
-      { "title": "Bull Board", "url": "http://192.168.1.216:3000", "port": "3000", "icon": "🐂" },
-      { "title": "AWS SQS", "url": "https://console.aws.amazon.com/sqs", "icon": "📮", "description": "Amazon Simple Queue Service" },
-      { "title": "Azure Service Bus", "url": "https://portal.azure.com", "icon": "🚌" },
-      { "title": "Pulsar Manager", "url": "http://192.168.1.217:9527", "port": "9527", "icon": "⭐" }
+      {
+        "title": "RabbitMQ",
+        "url": "http://192.168.1.210:15672",
+        "icon": "🐰",
+        "description": "Message broker for distributed systems",
+        "repoUrl": "https://github.com/example/rabbitmq",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Kafka UI",
+        "url": "http://192.168.1.211:8080",
+        "icon": "📨",
+        "repoUrl": "https://github.com/example/kafka-ui",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Redis Queue",
+        "url": "http://192.168.1.212:6379",
+        "icon": "💎",
+        "description": "In-memory data structure store",
+        "repoUrl": "https://github.com/example/redis-queue",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "ActiveMQ",
+        "url": "http://192.168.1.213:8161",
+        "icon": "📬",
+        "repoUrl": "https://github.com/example/activemq",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "NATS",
+        "url": "http://192.168.1.214:8222",
+        "icon": "⚡",
+        "repoUrl": "https://github.com/example/nats",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Celery Flower",
+        "url": "http://192.168.1.215:5555",
+        "icon": "🌸",
+        "description": "Celery monitoring tool",
+        "repoUrl": "https://github.com/example/celery-flower",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Bull Board",
+        "url": "http://192.168.1.216:3000",
+        "icon": "🐂",
+        "repoUrl": "https://github.com/example/bull-board",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "AWS SQS",
+        "url": "https://console.aws.amazon.com/sqs",
+        "icon": "📮",
+        "description": "Amazon Simple Queue Service",
+        "repoUrl": "https://github.com/example/aws-sqs",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Azure Service Bus",
+        "url": "https://portal.azure.com",
+        "icon": "🚌",
+        "repoUrl": "https://github.com/example/azure-service-bus",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Pulsar Manager",
+        "url": "http://192.168.1.217:9527",
+        "icon": "⭐",
+        "repoUrl": "https://github.com/example/pulsar-manager",
+        "iconRepo": "🔷"
+      }
     ]
   },
   {
     "title": "Analytics",
     "services": [
-      { "title": "Google Analytics", "url": "https://analytics.google.com", "icon": "📊", "description": "Web analytics service" },
-      { "title": "Matomo", "url": "http://192.168.1.220:8080", "port": "8080", "icon": "📈" },
-      { "title": "Mixpanel", "url": "https://mixpanel.com", "icon": "📉", "description": "Product analytics platform" },
-      { "title": "Amplitude", "url": "https://amplitude.com", "icon": "📊" },
-      { "title": "Plausible", "url": "http://192.168.1.221:8000", "port": "8000", "icon": "📈" },
-      { "title": "PostHog", "url": "http://192.168.1.222:8000", "port": "8000", "icon": "🦔", "description": "Open source product analytics" },
-      { "title": "Metabase", "url": "http://192.168.1.223:3000", "port": "3000", "icon": "📊" },
-      { "title": "Redash", "url": "http://192.168.1.224:5000", "port": "5000", "icon": "📈", "description": "Data visualization and dashboards" },
-      { "title": "Tableau", "url": "https://tableau.com", "icon": "📊" },
-      { "title": "Looker", "url": "https://looker.com", "icon": "👀" }
+      {
+        "title": "Google Analytics",
+        "url": "https://analytics.google.com",
+        "icon": "📊",
+        "description": "Web analytics service",
+        "repoUrl": "https://github.com/example/google-analytics",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Matomo",
+        "url": "http://192.168.1.220:8080",
+        "icon": "📈",
+        "repoUrl": "https://github.com/example/matomo",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Mixpanel",
+        "url": "https://mixpanel.com",
+        "icon": "📉",
+        "description": "Product analytics platform",
+        "repoUrl": "https://github.com/example/mixpanel",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Amplitude",
+        "url": "https://amplitude.com",
+        "icon": "📊",
+        "repoUrl": "https://github.com/example/amplitude",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Plausible",
+        "url": "http://192.168.1.221:8000",
+        "icon": "📈",
+        "repoUrl": "https://github.com/example/plausible",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "PostHog",
+        "url": "http://192.168.1.222:8000",
+        "icon": "🦔",
+        "description": "Open source product analytics",
+        "repoUrl": "https://github.com/example/posthog",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Metabase",
+        "url": "http://192.168.1.223:3000",
+        "icon": "📊",
+        "repoUrl": "https://github.com/example/metabase",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Redash",
+        "url": "http://192.168.1.224:5000",
+        "icon": "📈",
+        "description": "Data visualization and dashboards",
+        "repoUrl": "https://github.com/example/redash",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Tableau",
+        "url": "https://tableau.com",
+        "icon": "📊",
+        "repoUrl": "https://github.com/example/tableau",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Looker",
+        "url": "https://looker.com",
+        "icon": "👀",
+        "repoUrl": "https://github.com/example/looker",
+        "iconRepo": "🦊"
+      }
     ]
   },
   {
     "title": "Content Management",
     "services": [
-      { "title": "WordPress", "url": "http://192.168.1.230:8080", "port": "8080", "icon": "📰", "description": "Content management system" },
-      { "title": "Strapi", "url": "http://192.168.1.231:1337", "port": "1337", "icon": "🚀" },
-      { "title": "Contentful", "url": "https://contentful.com", "icon": "📦", "description": "Headless CMS" },
-      { "title": "Sanity", "url": "https://sanity.io", "icon": "🎨" },
-      { "title": "Directus", "url": "http://192.168.1.232:8055", "port": "8055", "icon": "🎯" },
-      { "title": "Ghost CMS", "url": "http://192.168.1.233:2368", "port": "2368", "icon": "👻", "description": "Professional publishing platform" },
-      { "title": "Drupal", "url": "http://192.168.1.234:8080", "port": "8080", "icon": "💧" },
-      { "title": "Joomla", "url": "http://192.168.1.235:8080", "port": "8080", "icon": "🌟", "description": "Content management system" },
-      { "title": "Prismic", "url": "https://prismic.io", "icon": "🔷" },
-      { "title": "Payload CMS", "url": "http://192.168.1.236:3000", "port": "3000", "icon": "🚀" }
+      {
+        "title": "WordPress",
+        "url": "http://192.168.1.230:8080",
+        "icon": "📰",
+        "description": "Content management system",
+        "repoUrl": "https://github.com/example/wordpress",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Strapi",
+        "url": "http://192.168.1.231:1337",
+        "icon": "🚀",
+        "repoUrl": "https://github.com/example/strapi",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Contentful",
+        "url": "https://contentful.com",
+        "icon": "📦",
+        "description": "Headless CMS",
+        "repoUrl": "https://github.com/example/contentful",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Sanity",
+        "url": "https://sanity.io",
+        "icon": "🎨",
+        "repoUrl": "https://github.com/example/sanity",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Directus",
+        "url": "http://192.168.1.232:8055",
+        "icon": "🎯",
+        "repoUrl": "https://github.com/example/directus",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Ghost CMS",
+        "url": "http://192.168.1.233:2368",
+        "icon": "👻",
+        "description": "Professional publishing platform",
+        "repoUrl": "https://github.com/example/ghost-cms",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Drupal",
+        "url": "http://192.168.1.234:8080",
+        "icon": "💧",
+        "repoUrl": "https://github.com/example/drupal",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Joomla",
+        "url": "http://192.168.1.235:8080",
+        "icon": "🌟",
+        "description": "Content management system",
+        "repoUrl": "https://github.com/example/joomla",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Prismic",
+        "url": "https://prismic.io",
+        "icon": "🔷",
+        "repoUrl": "https://github.com/example/prismic",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Payload CMS",
+        "url": "http://192.168.1.236:3000",
+        "icon": "🚀",
+        "repoUrl": "https://github.com/example/payload-cms",
+        "iconRepo": "🐙"
+      }
     ]
   },
   {
     "title": "DevOps Utilities",
     "services": [
-      { "title": "Terraform Cloud", "url": "https://app.terraform.io", "icon": "🏗️", "description": "Infrastructure as code platform" },
-      { "title": "Ansible Tower", "url": "http://192.168.1.240:443", "port": "443", "icon": "🎯" },
-      { "title": "Puppet", "url": "http://192.168.1.241:8140", "port": "8140", "icon": "🎭", "description": "Configuration management tool" },
-      { "title": "Chef Automate", "url": "http://192.168.1.242:443", "port": "443", "icon": "👨‍🍳" },
-      { "title": "SaltStack", "url": "http://192.168.1.243:8000", "port": "8000", "icon": "🧂" },
-      { "title": "Packer", "url": "https://packer.io", "icon": "📦", "description": "Machine image builder" },
-      { "title": "Vagrant Cloud", "url": "https://vagrantcloud.com", "icon": "📦" },
-      { "title": "Consul", "url": "http://192.168.1.244:8500", "port": "8500", "icon": "🔗", "description": "Service mesh solution" },
-      { "title": "Nomad UI", "url": "http://192.168.1.245:4646", "port": "4646", "icon": "🏕️" },
-      { "title": "Terraform Registry", "url": "https://registry.terraform.io", "icon": "📚" }
+      {
+        "title": "Terraform Cloud",
+        "url": "https://app.terraform.io",
+        "icon": "🏗️",
+        "description": "Infrastructure as code platform",
+        "repoUrl": "https://github.com/example/terraform-cloud",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Ansible Tower",
+        "url": "http://192.168.1.240:443",
+        "icon": "🎯",
+        "repoUrl": "https://github.com/example/ansible-tower",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Puppet",
+        "url": "http://192.168.1.241:8140",
+        "icon": "🎭",
+        "description": "Configuration management tool",
+        "repoUrl": "https://github.com/example/puppet",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Chef Automate",
+        "url": "http://192.168.1.242:443",
+        "icon": "👨‍🍳",
+        "repoUrl": "https://github.com/example/chef-automate",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "SaltStack",
+        "url": "http://192.168.1.243:8000",
+        "icon": "🧂",
+        "repoUrl": "https://github.com/example/saltstack",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Packer",
+        "url": "https://packer.io",
+        "icon": "📦",
+        "description": "Machine image builder",
+        "repoUrl": "https://github.com/example/packer",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Vagrant Cloud",
+        "url": "https://vagrantcloud.com",
+        "icon": "📦",
+        "repoUrl": "https://github.com/example/vagrant-cloud",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Consul",
+        "url": "http://192.168.1.244:8500",
+        "icon": "🔗",
+        "description": "Service mesh solution",
+        "repoUrl": "https://github.com/example/consul",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Nomad UI",
+        "url": "http://192.168.1.245:4646",
+        "icon": "🏕️",
+        "repoUrl": "https://github.com/example/nomad-ui",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Terraform Registry",
+        "url": "https://registry.terraform.io",
+        "icon": "📚",
+        "repoUrl": "https://github.com/example/terraform-registry",
+        "iconRepo": "🦊"
+      }
     ]
   },
   {
     "title": "Storage & Backup",
     "services": [
-      { "title": "MinIO", "url": "http://192.168.1.250:9000", "port": "9000", "icon": "🗄️", "description": "High performance object storage" },
-      { "title": "Nextcloud", "url": "http://192.168.1.251:8080", "port": "8080", "icon": "☁️" },
-      { "title": "Seafile", "url": "http://192.168.1.252:8000", "port": "8000", "icon": "🌊", "description": "File hosting platform" },
-      { "title": "ownCloud", "url": "http://192.168.1.253:8080", "port": "8080", "icon": "☁️" },
-      { "title": "Synology NAS", "url": "http://192.168.1.254:5000", "port": "5000", "icon": "💾" },
-      { "title": "Backblaze", "url": "https://backblaze.com", "icon": "☁️", "description": "Cloud storage and backup" },
-      { "title": "Restic UI", "url": "http://192.168.1.255:8080", "port": "8080", "icon": "💾" },
-      { "title": "Duplicati", "url": "http://192.168.2.1:8200", "port": "8200", "icon": "📦", "description": "Backup software" },
-      { "title": "Velero", "url": "http://192.168.2.2:8080", "port": "8080", "icon": "⛵" },
-      { "title": "Bacula", "url": "http://192.168.2.3:9101", "port": "9101", "icon": "🦇" }
+      {
+        "title": "MinIO",
+        "url": "http://192.168.1.250:9000",
+        "icon": "🗄️",
+        "description": "High performance object storage",
+        "repoUrl": "https://github.com/example/minio",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Nextcloud",
+        "url": "http://192.168.1.251:8080",
+        "icon": "☁️",
+        "repoUrl": "https://github.com/example/nextcloud",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Seafile",
+        "url": "http://192.168.1.252:8000",
+        "icon": "🌊",
+        "description": "File hosting platform",
+        "repoUrl": "https://github.com/example/seafile",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "ownCloud",
+        "url": "http://192.168.1.253:8080",
+        "icon": "☁️",
+        "repoUrl": "https://github.com/example/owncloud",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Synology NAS",
+        "url": "http://192.168.1.254:5000",
+        "icon": "💾",
+        "repoUrl": "https://github.com/example/synology-nas",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Backblaze",
+        "url": "https://backblaze.com",
+        "icon": "☁️",
+        "description": "Cloud storage and backup",
+        "repoUrl": "https://github.com/example/backblaze",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Restic UI",
+        "url": "http://192.168.1.255:8080",
+        "icon": "💾",
+        "repoUrl": "https://github.com/example/restic-ui",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Duplicati",
+        "url": "http://192.168.2.1:8200",
+        "icon": "📦",
+        "description": "Backup software",
+        "repoUrl": "https://github.com/example/duplicati",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Velero",
+        "url": "http://192.168.2.2:8080",
+        "icon": "⛵",
+        "repoUrl": "https://github.com/example/velero",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Bacula",
+        "url": "http://192.168.2.3:9101",
+        "icon": "🦇",
+        "repoUrl": "https://github.com/example/bacula",
+        "iconRepo": "🦊"
+      }
     ]
   },
   {
     "title": "Network Tools",
     "services": [
-      { "title": "pfSense", "url": "http://192.168.1.1:443", "port": "443", "icon": "🔥", "description": "Firewall and router software" },
-      { "title": "OpenVPN", "url": "http://192.168.2.10:943", "port": "943", "icon": "🔐" },
-      { "title": "WireGuard", "url": "http://192.168.2.11:51820", "port": "51820", "icon": "🔒", "description": "VPN protocol" },
-      { "title": "Pi-hole", "url": "http://192.168.2.12:80", "port": "80", "icon": "🕳️" },
-      { "title": "Unifi Controller", "url": "http://192.168.2.13:8443", "port": "8443", "icon": "📡" },
-      { "title": "Wireshark", "url": "http://192.168.2.14:8080", "port": "8080", "icon": "🦈", "description": "Network protocol analyzer" },
-      { "title": "Nagios", "url": "http://192.168.2.15:8080", "port": "8080", "icon": "👁️" },
-      { "title": "Zabbix", "url": "http://192.168.2.16:8080", "port": "8080", "icon": "📊", "description": "Enterprise monitoring solution" },
-      { "title": "NetBox", "url": "http://192.168.2.17:8000", "port": "8000", "icon": "📦" },
-      { "title": "LibreNMS", "url": "http://192.168.2.18:8080", "port": "8080", "icon": "🌐" }
+      {
+        "title": "pfSense",
+        "url": "http://192.168.1.1:443",
+        "icon": "🔥",
+        "description": "Firewall and router software",
+        "repoUrl": "https://github.com/example/pfsense",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "OpenVPN",
+        "url": "http://192.168.2.10:943",
+        "icon": "🔐",
+        "repoUrl": "https://github.com/example/openvpn",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "WireGuard",
+        "url": "http://192.168.2.11:51820",
+        "icon": "🔒",
+        "description": "VPN protocol",
+        "repoUrl": "https://github.com/example/wireguard",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Pi-hole",
+        "url": "http://192.168.2.12:80",
+        "icon": "🕳️",
+        "repoUrl": "https://github.com/example/pi-hole",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Unifi Controller",
+        "url": "http://192.168.2.13:8443",
+        "icon": "📡",
+        "repoUrl": "https://github.com/example/unifi-controller",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Wireshark",
+        "url": "http://192.168.2.14:8080",
+        "icon": "🦈",
+        "description": "Network protocol analyzer",
+        "repoUrl": "https://github.com/example/wireshark",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Nagios",
+        "url": "http://192.168.2.15:8080",
+        "icon": "👁️",
+        "repoUrl": "https://github.com/example/nagios",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Zabbix",
+        "url": "http://192.168.2.16:8080",
+        "icon": "📊",
+        "description": "Enterprise monitoring solution",
+        "repoUrl": "https://github.com/example/zabbix",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "NetBox",
+        "url": "http://192.168.2.17:8000",
+        "icon": "📦",
+        "repoUrl": "https://github.com/example/netbox",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "LibreNMS",
+        "url": "http://192.168.2.18:8080",
+        "icon": "🌐",
+        "repoUrl": "https://github.com/example/librenms",
+        "iconRepo": "🐙"
+      }
     ]
   },
   {
     "title": "Admin Dashboards",
     "services": [
-      { "title": "Blogic Dashboard", "url": "http://192.168.1.194:9700", "port": "9700", "icon": "📊", "description": "Manage applications, tickets, and more with ease" },
-      { "title": "BLogic Licenses", "url": "http://192.168.1.194:3200", "port": "9220", "icon": "🏆", "description": "Manage licenses for all applications within the BLogic ecosystem" },
-      { "title": "Portainer CE", "url": "http://192.168.2.20:9000", "port": "9000", "icon": "📦", "description": "Container management platform" },
-      { "title": "Cockpit", "url": "http://192.168.2.21:9090", "port": "9090", "icon": "🚁" },
-      { "title": "Webmin", "url": "http://192.168.2.22:10000", "port": "10000", "icon": "⚙️", "description": "Web-based system administration" },
-      { "title": "Proxmox", "url": "http://192.168.2.23:8006", "port": "8006", "icon": "🖥️" },
-      { "title": "ESXi Host", "url": "http://192.168.2.24:443", "port": "443", "icon": "💻" },
-      { "title": "TrueNAS", "url": "http://192.168.2.25:80", "port": "80", "icon": "💾", "description": "Network attached storage" },
-      { "title": "Home Assistant", "url": "http://192.168.2.26:8123", "port": "8123", "icon": "🏠" },
-      { "title": "OpenMediaVault", "url": "http://192.168.2.27:80", "port": "80", "icon": "📦" }
+      {
+        "title": "Blogic Dashboard",
+        "url": "http://192.168.1.194:9700",
+        "icon": "📊",
+        "description": "Manage applications, tickets, and more with ease",
+        "repoUrl": "https://github.com/example/blogic-dashboard",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "BLogic Licenses",
+        "url": "http://192.168.1.194:3200",
+        "icon": "🏆",
+        "description": "Manage licenses for all applications within the BLogic ecosystem",
+        "repoUrl": "https://github.com/example/blogic-licenses",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "Portainer CE",
+        "url": "http://192.168.2.20:9000",
+        "icon": "📦",
+        "description": "Container management platform",
+        "repoUrl": "https://github.com/example/portainer-ce",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Cockpit",
+        "url": "http://192.168.2.21:9090",
+        "icon": "🚁",
+        "repoUrl": "https://github.com/example/cockpit",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "Webmin",
+        "url": "http://192.168.2.22:10000",
+        "icon": "⚙️",
+        "description": "Web-based system administration",
+        "repoUrl": "https://github.com/example/webmin",
+        "iconRepo": "🐙"
+      },
+      {
+        "title": "Proxmox",
+        "url": "http://192.168.2.23:8006",
+        "icon": "🖥️",
+        "repoUrl": "https://github.com/example/proxmox",
+        "iconRepo": "🔷"
+      },
+      {
+        "title": "ESXi Host",
+        "url": "http://192.168.2.24:443",
+        "icon": "💻",
+        "repoUrl": "https://github.com/example/esxi-host",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "TrueNAS",
+        "url": "http://192.168.2.25:80",
+        "icon": "💾",
+        "description": "Network attached storage",
+        "repoUrl": "https://github.com/example/truenas",
+        "iconRepo": "🪣"
+      },
+      {
+        "title": "Home Assistant",
+        "url": "http://192.168.2.26:8123",
+        "icon": "🏠",
+        "repoUrl": "https://github.com/example/home-assistant",
+        "iconRepo": "🦊"
+      },
+      {
+        "title": "OpenMediaVault",
+        "url": "http://192.168.2.27:80",
+        "icon": "📦",
+        "repoUrl": "https://github.com/example/openmediavault",
+        "iconRepo": "🔷"
+      }
     ]
   }
 ]

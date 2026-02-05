@@ -14,7 +14,9 @@ export function useServiceSearch(sections: SectionType[], delay: number = 300) {
     return sections
       .map((section) => {
         // Check if section title matches
-        const sectionTitleMatches = section.title.toLowerCase().includes(keyword);
+        const sectionTitleMatches = section.title
+          .toLowerCase()
+          .includes(keyword);
 
         // If section title matches, return all services
         if (sectionTitleMatches) {
@@ -24,11 +26,11 @@ export function useServiceSearch(sections: SectionType[], delay: number = 300) {
         // Otherwise, filter services by keyword
         return {
           ...section,
-          services: section.services.filter((service) =>
-            service.title.toLowerCase().includes(keyword) ||
-            service.description?.toLowerCase().includes(keyword) ||
-            service.url.toLowerCase().includes(keyword) ||
-            service.port?.toLowerCase().includes(keyword)
+          services: section.services.filter(
+            (service) =>
+              service.title.toLowerCase().includes(keyword) ||
+              service.description?.toLowerCase().includes(keyword) ||
+              service.url.toLowerCase().includes(keyword)
           ),
         };
       })
