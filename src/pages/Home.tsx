@@ -42,9 +42,17 @@ const Home = () => {
     });
   };
 
-  const expandAll = () => setCollapsedSections(new Set());
-  const collapseAll = () =>
-    setCollapsedSections(new Set(filteredSections.map((s) => s.title)));
+  const allCollapsed =
+    filteredSections.length > 0 &&
+    collapsedSections.size === filteredSections.length;
+
+  const toggleExpandCollapseAll = () => {
+    if (allCollapsed) {
+      setCollapsedSections(new Set());
+    } else {
+      setCollapsedSections(new Set(filteredSections.map((s) => s.title)));
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
@@ -133,17 +141,36 @@ const Home = () => {
         {/* Controls: Expand/Collapse All and Toggle Theme */}
         {!isSearching && filteredSections.length > 0 && (
           <div className="flex justify-end items-center gap-2 mb-6">
-            <Button variant="secondary" size="sm" onClick={expandAll} className="!text-blue-600 dark:!text-blue-400 hover:!text-blue-700 dark:hover:!text-blue-300 hover:!bg-blue-50 dark:hover:!bg-gray-700">
-              Expand All
-            </Button>
-            <Button variant="secondary" size="sm" onClick={collapseAll}>
-              Collapse All
+            <Button
+              variant="secondary"
+              size="sm"
+              className="flex space-x-2 min-w-40 transition-all ease-in-out duration-300"
+              onClick={toggleExpandCollapseAll}
+              leftIcon={
+                <svg
+                  className={`w-5 h-5 transition-transform ${
+                    allCollapsed ? "" : "rotate-180"
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              }
+            >
+              {allCollapsed ? "Expand All" : "Collapse All"}
             </Button>
             <div className="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-2"></div>
             <Button
               variant="theme"
+              size="sm"
               onClick={toggleTheme}
-              fullWidth
               title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
               leftIcon={
                 theme === "light" ? (
