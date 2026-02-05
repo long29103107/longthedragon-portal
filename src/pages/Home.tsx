@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import Header from "../modules/Header";
 import ServiceSection from "../modules/ServiceSection";
 import ServiceCardSkeleton from "@/modules/ServiceCardSkeleton";
+import { Input } from "@/components";
 import { usePortalStore } from "@/store";
 import { useServiceSearch, useTheme } from "@/hooks";
 
@@ -66,43 +67,51 @@ const Home = () => {
       <div className="max-w-8xl mx-auto px-8 pb-16">
         {/* Search Bar */}
         <div className="mb-8">
-          <div className="relative max-w-3xl mx-auto">
-            <input
+          <div className="max-w-3xl mx-auto">
+            <Input
               type="text"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search services by name, description, URL, or port..."
-              className="w-full px-6 py-4 pr-12 rounded-lg border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300 text-lg"
+              className="text-lg py-4"
+              rightIcon={
+                <div className="flex items-center gap-2">
+                  {searchTerm && (
+                    <button
+                      onClick={clearSearch}
+                      className="w-6 h-6 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                      title="Clear search"
+                    >
+                      <svg
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M6 18L18 6M6 6l12 12"
+                        />
+                      </svg>
+                    </button>
+                  )}
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </div>
+              }
             />
-            <svg
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 dark:text-gray-500"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            {searchTerm && (
-              <button
-                onClick={clearSearch}
-                className="absolute right-12 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
-                title="Clear search"
-              >
-                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            )}
           </div>{" "}
           <p className="text-center mt-2 text-gray-600 dark:text-gray-300">
             {debouncedSearchTerm ? `Found ${totalResults} service(s)` : ""}
