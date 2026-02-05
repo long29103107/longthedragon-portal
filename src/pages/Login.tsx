@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import { Input } from "@/components";
+import { Button, Input } from "@/components";
 import { useAuth } from "@/hooks";
 
 const Login = () => {
@@ -111,12 +111,9 @@ const Login = () => {
                 </div>
               )}
 
-              <button
-                type="submit"
-                className="w-full px-4 py-3 text-white font-semibold bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 rounded-lg shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
-              >
+              <Button type="submit" variant="primary" size="lg" fullWidth>
                 Sign In
-              </button>
+              </Button>
             </form>
           </div>
         </div>

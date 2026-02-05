@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button } from "@/components";
 import type { ServiceCardType } from "@/types/service";
 
 interface ServiceCardProps {
@@ -53,9 +54,11 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
 
         <div className="flex justify-between gap-4 text-lg items-center mt-auto">
-          <button
+          <Button
+            variant="ghost"
+            size="sm"
             onClick={handleCopyUrl}
-            className="text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 transition-colors group/copy"
+            className="!p-0 !text-blue-500 dark:!text-blue-400 hover:!text-blue-700 dark:hover:!text-blue-300 text-lg h-auto group/copy"
             title="Click to copy URL"
           >
             <span>{service.url}</span>
@@ -82,7 +85,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
               )}
             </svg>
             {copied && <span className="text-green-600 text-xs">Copied!</span>}
-          </button>
+          </Button>
           {service.port && (
             <span className="text-yellow-500 font-medium whitespace-nowrap">
               Port: {service.port}

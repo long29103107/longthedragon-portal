@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import Header from "../modules/Header";
-import ServiceSection from "../modules/ServiceSection";
-import ServiceCardSkeleton from "@/modules/ServiceCardSkeleton";
-import { Input } from "@/components";
+import Header from "../modules/Home/Header";
+import ServiceSection from "../modules/Home/ServiceSection";
+import ServiceCardSkeleton from "@/modules/Home/ServiceCardSkeleton";
+import { Button, Input } from "@/components";
 import { usePortalStore } from "@/store";
 import { useServiceSearch, useTheme, useAuth } from "@/hooks";
 
@@ -49,25 +49,27 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="max-w-8xl mx-auto px-8 pt-6 flex justify-end">
-        <button
+        <Button
+          variant="danger"
           onClick={handleLogout}
-          className="px-5 py-2.5 text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors duration-300 flex items-center gap-2"
+          leftIcon={
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+              />
+            </svg>
+          }
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-            />
-          </svg>
           Logout
-        </button>
+        </Button>
       </div>
       <Header />
 
@@ -84,12 +86,15 @@ const Home = () => {
               rightIcon={
                 <div className="flex items-center gap-2">
                   {searchTerm && (
-                    <button
+                    <Button
+                      variant="ghost"
+                      size="sm"
                       onClick={clearSearch}
-                      className="w-6 h-6 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                      className="!p-1.5 !min-w-0"
                       title="Clear search"
                     >
                       <svg
+                        className="w-5 h-5"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -101,7 +106,7 @@ const Home = () => {
                           d="M6 18L18 6M6 6l12 12"
                         />
                       </svg>
-                    </button>
+                    </Button>
                   )}
                   <svg
                     className="w-6 h-6"
@@ -128,27 +133,20 @@ const Home = () => {
         {/* Controls: Expand/Collapse All and Toggle Theme */}
         {!isSearching && filteredSections.length > 0 && (
           <div className="flex justify-end items-center gap-2 mb-6">
-            <button
-              onClick={expandAll}
-              className="px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300"
-            >
+            <Button variant="secondary" size="sm" onClick={expandAll} className="!text-blue-600 dark:!text-blue-400 hover:!text-blue-700 dark:hover:!text-blue-300 hover:!bg-blue-50 dark:hover:!bg-gray-700">
               Expand All
-            </button>
-            <button
-              onClick={collapseAll}
-              className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300"
-            >
+            </Button>
+            <Button variant="secondary" size="sm" onClick={collapseAll}>
               Collapse All
-            </button>
+            </Button>
             <div className="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-2"></div>
-            <div className="relative rounded-lg p-[2px] bg-gradient-to-r from-green-300/100 to-yellow-300/100 transition-all duration-300">
-              <button
-                onClick={toggleTheme}
-                className="px-5 py-2.5 text-sm font-semibold text-gray-800 dark:text-black bg-gradient 
-                hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 w-full"
-                title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-              >
-                {theme === "light" ? (
+            <Button
+              variant="theme"
+              onClick={toggleTheme}
+              fullWidth
+              title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              leftIcon={
+                theme === "light" ? (
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -176,10 +174,11 @@ const Home = () => {
                       d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                     />
                   </svg>
-                )}
-                {theme === "light" ? "Dark" : "Light"} Mode
-              </button>
-            </div>
+                )
+              }
+            >
+              {theme === "light" ? "Dark" : "Light"} Mode
+            </Button>
           </div>
         )}
 
