@@ -1,1 +1,2 @@
-export type { ServiceCard } from './service';
+export type { ServiceCardType } from './service';
+export type { SectionType } from './section';

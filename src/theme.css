@@ -1,0 +1,20 @@
+@theme {
+  --color-primary: #f59e0b;
+  --color-secondary: #3b82f6;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  
+  --max-width-8xl: 96rem;
+  --max-width-9xl: 120rem;
+}
+
+@layer utilities {
+  .max-w-8xl {
+    max-width: var(--max-width-8xl);
+  }
+  
+  .max-w-9xl {
+    max-width: var(--max-width-9xl);
+  }
+}

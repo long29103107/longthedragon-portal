@@ -1,4 +1,4 @@
-export interface ServiceCard {
+export interface ServiceCardType {
   title: string;
   description?: string;
   url: string;
