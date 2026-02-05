@@ -9,6 +9,8 @@
   --max-width-9xl: 120rem;
 }
 
+@variant dark (.dark &);
+
 @layer utilities {
   .max-w-8xl {
     max-width: var(--max-width-8xl);

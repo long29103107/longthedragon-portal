@@ -8,22 +8,25 @@ interface ServiceSectionProps {
   onToggle?: () => void;
 }
 
-export function ServiceSection({
+const ServiceSection = ({
   title,
   services,
   isCollapsed = false,
   onToggle,
-}: ServiceSectionProps) {
+}: ServiceSectionProps) => {
   return (
     <section className="mb-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-3xl font-bold text-gray-800">
-          {title} <span className="text-gray-500">({services.length})</span>
+        <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">
+          {title}{" "}
+          <span className="text-gray-500 dark:text-gray-400">
+            ({services.length})
+          </span>
         </h2>
         {onToggle && (
           <button
             onClick={onToggle}
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300"
             title={isCollapsed ? "Expand section" : "Collapse section"}
           >
             <svg
@@ -55,4 +58,6 @@ export function ServiceSection({
       </div>
     </section>
   );
-}
+};
+
+export default ServiceSection;

@@ -22,17 +22,17 @@ export function ServiceCard({ service }: ServiceCardProps) {
         href={service.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-10 flex flex-col h-full block"
+        className="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-10 flex flex-col h-full block"
       >
         <div className="flex items-start justify-between mb-4">
           <div className="flex items-center gap-4 flex-1">
             <div className="text-4xl">{service.icon}</div>
-            <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-blue-600">
+            <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 group-hover:text-blue-600 dark:group-hover:text-blue-400">
               {service.title}
             </h3>
           </div>
           <svg
-            className="w-5 h-5 text-gray-400 group-hover:text-blue-600 flex-shrink-0"
+            className="w-5 h-5 text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex-shrink-0"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -47,7 +47,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         </div>
 
         <div className="flex-1 mb-4">
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             {service.description || service.title}
           </p>
         </div>
@@ -55,7 +55,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
         <div className="flex gap-4 text-lg items-center mt-auto">
           <button
             onClick={handleCopyUrl}
-            className="text-blue-500 hover:text-blue-700 flex items-center gap-1 transition-colors group/copy"
+            className="text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 transition-colors group/copy"
             title="Click to copy URL"
           >
             <span>{service.url}</span>

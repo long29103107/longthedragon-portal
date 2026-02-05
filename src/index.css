@@ -1,9 +1,17 @@
 @import "tailwindcss";
 @import "./theme.css";
 
+* {
+  transition: none !important;
+}
+
 @layer base {
   :root {
     @apply text-gray-900 bg-white font-sans;
+  }
+
+  :root.dark {
+    @apply text-gray-100 bg-gray-900;
   }
 
   body {

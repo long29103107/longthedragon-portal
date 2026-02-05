@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Header } from "@/modules/Header";
-import { ServiceSection } from "@/modules/ServiceSection";
-import { ServiceCardSkeleton } from "@/modules/ServiceCardSkeleton";
+import Header from "../modules/Header";
+import ServiceSection from "../modules/ServiceSection";
+import ServiceCardSkeleton from "@/modules/ServiceCardSkeleton";
 import { usePortalStore } from "@/store";
-import { useServiceSearch } from "@/hooks";
+import { useServiceSearch, useTheme } from "@/hooks";
 
 const Home = () => {
   const { sections } = usePortalStore();
@@ -15,9 +15,8 @@ const Home = () => {
     totalResults,
     clearSearch,
   } = useServiceSearch(sections);
-
   const isSearching = searchTerm !== debouncedSearchTerm;
-
+  const { theme, toggleTheme } = useTheme();
   const [collapsedSections, setCollapsedSections] = useState<Set<string>>(
     new Set()
   );
@@ -38,13 +37,9 @@ const Home = () => {
   const collapseAll = () =>
     setCollapsedSections(new Set(filteredSections.map((s) => s.title)));
 
-  const handleCreateService = () => {
-    console.log("Create new service clicked");
-  };
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <Header onCreateService={handleCreateService} />
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
+      <Header />
 
       <div className="max-w-8xl mx-auto px-8 pb-16">
         {/* Search Bar */}
@@ -55,10 +50,10 @@ const Home = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search services by name, description, URL, or port..."
-              className="w-full px-6 py-4 pr-12 rounded-lg border-2 border-gray-200 focus:border-blue-500 focus:outline-none transition-colors text-lg"
+              className="w-full px-6 py-4 pr-12 rounded-lg border-2 border-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 focus:border-blue-500 dark:focus:border-blue-400 focus:outline-none transition-colors duration-300 text-lg"
             />
             <svg
-              className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400"
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 dark:text-gray-500"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -73,7 +68,7 @@ const Home = () => {
             {searchTerm && (
               <button
                 onClick={clearSearch}
-                className="absolute right-12 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 hover:text-gray-600"
+                className="absolute right-12 top-1/2 -translate-y-1/2 w-6 h-6 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300"
                 title="Clear search"
               >
                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -87,26 +82,66 @@ const Home = () => {
               </button>
             )}
           </div>{" "}
-          <p className="text-center mt-2 text-gray-600">
+          <p className="text-center mt-2 text-gray-600 dark:text-gray-300">
             {debouncedSearchTerm ? `Found ${totalResults} service(s)` : ""}
           </p>
         </div>
 
-        {/* Collapse/Expand All Controls */}
+        {/* Controls: Expand/Collapse All and Toggle Theme */}
         {!isSearching && filteredSections.length > 0 && (
-          <div className="flex justify-end gap-2 mb-6">
+          <div className="flex justify-end items-center gap-2 mb-6">
             <button
               onClick={expandAll}
-              className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
+              className="px-4 py-2 text-sm font-medium text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 hover:bg-blue-50 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300"
             >
               Expand All
             </button>
             <button
               onClick={collapseAll}
-              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+              className="px-4 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300"
             >
               Collapse All
             </button>
+            <div className="w-px h-6 bg-gray-300 dark:bg-gray-600 mx-2"></div>
+            <div className="relative rounded-lg p-[2px] bg-gradient-to-r from-green-300/100 to-yellow-300/100 transition-all duration-300">
+              <button
+                onClick={toggleTheme}
+                className="px-5 py-2.5 text-sm font-semibold text-gray-800 dark:text-black bg-gradient 
+                hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white rounded-lg hover:shadow-lg transition-all duration-300 flex items-center gap-2 w-full"
+                title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
+              >
+                {theme === "light" ? (
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                    />
+                  </svg>
+                )}
+                {theme === "light" ? "Dark" : "Light"} Mode
+              </button>
+            </div>
           </div>
         )}
 
@@ -134,7 +169,7 @@ const Home = () => {
         ) : (
           <div className="text-center py-16">
             <svg
-              className="mx-auto w-16 h-16 text-gray-400 mb-4"
+              className="mx-auto w-16 h-16 text-gray-400 dark:text-gray-500 mb-4"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -146,10 +181,12 @@ const Home = () => {
                 d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-2">
               No services found
             </h3>
-            <p className="text-gray-500">Try adjusting your search terms</p>
+            <p className="text-gray-500 dark:text-gray-400">
+              Try adjusting your search terms
+            </p>
           </div>
         )}
       </div>
