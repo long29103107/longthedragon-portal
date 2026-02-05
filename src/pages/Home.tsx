@@ -1,13 +1,14 @@
 import { useState } from "react";
-import { Link } from "react-router";
+import { useNavigate } from "react-router";
 import Header from "../modules/Header";
 import ServiceSection from "../modules/ServiceSection";
 import ServiceCardSkeleton from "@/modules/ServiceCardSkeleton";
 import { Input } from "@/components";
 import { usePortalStore } from "@/store";
-import { useServiceSearch, useTheme } from "@/hooks";
+import { useServiceSearch, useTheme, useAuth } from "@/hooks";
 
 const Home = () => {
+  const navigate = useNavigate();
   const { sections } = usePortalStore();
   const {
     searchTerm,
@@ -19,9 +20,15 @@ const Home = () => {
   } = useServiceSearch(sections);
   const isSearching = searchTerm !== debouncedSearchTerm;
   const { theme, toggleTheme } = useTheme();
+  const { logout } = useAuth();
   const [collapsedSections, setCollapsedSections] = useState<Set<string>>(
     new Set()
   );
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login", { replace: true });
+  };
 
   const toggleSection = (sectionTitle: string) => {
     setCollapsedSections((prev) => {
@@ -42,9 +49,9 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 transition-colors duration-300">
       <div className="max-w-8xl mx-auto px-8 pt-6 flex justify-end">
-        <Link
-          to="/login"
-          className="px-5 py-2.5 text-sm font-medium text-gray-800 dark:text-gray-100 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-300 flex items-center gap-2"
+        <button
+          onClick={handleLogout}
+          className="px-5 py-2.5 text-sm font-medium text-red-600 dark:text-red-400 hover:text-red-700 dark:hover:text-red-300 hover:bg-red-50 dark:hover:bg-red-900/20 rounded-lg transition-colors duration-300 flex items-center gap-2"
         >
           <svg
             className="w-5 h-5"
@@ -56,11 +63,11 @@ const Home = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+              d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
             />
           </svg>
-          Login
-        </Link>
+          Logout
+        </button>
       </div>
       <Header />
 

@@ -1,18 +1,36 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Input } from "@/components";
+import { useAuth } from "@/hooks";
 
 const Login = () => {
   const navigate = useNavigate();
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     username: "",
     password: "",
   });
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Login attempt:", formData);
-    navigate("/");
+    setError("");
+
+    // Simulate authentication
+    // In a real app, you would call your API here
+    try {
+      // For demo purposes, accept any username/password
+      // In production, validate against your backend
+      const fakeToken = `token_${formData.username}_${Date.now()}`;
+      
+      // Store the token
+      login(fakeToken);
+      
+      // Navigate to home
+      navigate("/", { replace: true });
+    } catch (err) {
+      setError("Invalid username or password");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,6 +104,12 @@ const Login = () => {
                   </svg>
                 }
               />
+
+              {error && (
+                <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-3 text-red-600 dark:text-red-400 text-sm">
+                  {error}
+                </div>
+              )}
 
               <button
                 type="submit"
