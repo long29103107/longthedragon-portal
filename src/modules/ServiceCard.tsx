@@ -84,7 +84,9 @@ export function ServiceCard({ service }: ServiceCardProps) {
             {copied && <span className="text-green-600 text-xs">Copied!</span>}
           </button>
           {service.port && (
-            <span className="text-yellow-500">Port: {service.port}</span>
+            <span className="text-yellow-500 flex justify-end gap-1">
+              Port: {service.port}
+            </span>
           )}
         </div>
       </a>

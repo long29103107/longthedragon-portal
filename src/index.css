@@ -13,6 +13,12 @@
   #root {
     @apply min-h-screen;
   }
+
+  button,
+  a,
+  label {
+    @apply cursor-pointer;
+  }
 }
 
 @keyframes spin {

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Header } from "@/modules/Header";
 import { ServiceSection } from "@/modules/ServiceSection";
 import { ServiceCardSkeleton } from "@/modules/ServiceCardSkeleton";
@@ -11,14 +12,39 @@ const Home = () => {
     setSearchTerm,
     debouncedSearchTerm,
     filteredSections,
+    totalResults,
     clearSearch,
-  } = useServiceSearch(sections, 500);
+  } = useServiceSearch(sections);
 
   const isSearching = searchTerm !== debouncedSearchTerm;
 
+  const [collapsedSections, setCollapsedSections] = useState<Set<string>>(
+    new Set()
+  );
+
+  const toggleSection = (sectionTitle: string) => {
+    setCollapsedSections((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(sectionTitle)) {
+        newSet.delete(sectionTitle);
+      } else {
+        newSet.add(sectionTitle);
+      }
+      return newSet;
+    });
+  };
+
+  const expandAll = () => setCollapsedSections(new Set());
+  const collapseAll = () =>
+    setCollapsedSections(new Set(filteredSections.map((s) => s.title)));
+
+  const handleCreateService = () => {
+    console.log("Create new service clicked");
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <Header />
+      <Header onCreateService={handleCreateService} />
 
       <div className="max-w-8xl mx-auto px-8 pb-16">
         {/* Search Bar */}
@@ -60,8 +86,29 @@ const Home = () => {
                 </svg>
               </button>
             )}
-          </div>
+          </div>{" "}
+          <p className="text-center mt-2 text-gray-600">
+            {debouncedSearchTerm ? `Found ${totalResults} service(s)` : ""}
+          </p>
         </div>
+
+        {/* Collapse/Expand All Controls */}
+        {!isSearching && filteredSections.length > 0 && (
+          <div className="flex justify-end gap-2 mb-6">
+            <button
+              onClick={expandAll}
+              className="px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors"
+            >
+              Expand All
+            </button>
+            <button
+              onClick={collapseAll}
+              className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              Collapse All
+            </button>
+          </div>
+        )}
 
         {/* Sections */}
         {isSearching ? (
@@ -80,6 +127,8 @@ const Home = () => {
               key={index}
               title={section.title}
               services={section.services}
+              isCollapsed={collapsedSections.has(section.title)}
+              onToggle={() => toggleSection(section.title)}
             />
           ))
         ) : (
