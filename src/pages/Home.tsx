@@ -203,9 +203,7 @@ const Home = () => {
                   </svg>
                 )
               }
-            >
-              {theme === "light" ? "Dark" : "Light"} Mode
-            </Button>
+            ></Button>
           </div>
         )}
 
