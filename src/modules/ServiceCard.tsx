@@ -52,7 +52,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
           </p>
         </div>
 
-        <div className="flex gap-4 text-lg items-center mt-auto">
+        <div className="flex justify-between gap-4 text-lg items-center mt-auto">
           <button
             onClick={handleCopyUrl}
             className="text-blue-500 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 flex items-center gap-1 transition-colors group/copy"
@@ -84,7 +84,7 @@ export function ServiceCard({ service }: ServiceCardProps) {
             {copied && <span className="text-green-600 text-xs">Copied!</span>}
           </button>
           {service.port && (
-            <span className="text-yellow-500 flex justify-end gap-1">
+            <span className="text-yellow-500 font-medium whitespace-nowrap">
               Port: {service.port}
             </span>
           )}
